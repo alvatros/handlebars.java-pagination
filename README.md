@@ -9,7 +9,7 @@ This is Handlebars.java's(https://github.com/jknack/handlebars.java) Helper that
     <br/>Some external library were used. google guava,slf4j... If you want, It is easy to remove
     
 - pagination.hbs : asset hbs
-{{{#!plain
+{{{#!html
 // Hello World 출력 프로그램
 <!--pagination param ==> page:{{param.currentPage}} totalPageCount:{{param.totlalPageCount}} countPerPageGroup:{{param.countPerPageGroup}}-->
 {{#pagination this param.currentPage param.totlalPageCount param.countPerPageGroup}}
