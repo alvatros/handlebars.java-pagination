@@ -1,5 +1,5 @@
-<!--pagination param ==> page:{{param.page}} totalPageCount:{{param.totlalPageCount}} countPerPageGroup:{{param.countPerPageGroup}}-->
-{{#pagination this param.page param.totlalPageCount param.countPerPageGroup}}
+<!--pagination param ==> currentPage:{{param.currentPage}} totalPageCount:{{param.totlalPageCount}} countPerPageGroup:{{param.countPerPageGroup}}-->
+{{#pagination this param.currentPage param.totlalPageCount param.countPerPageGroup}}
     <div class="paging_bootstrap">
         <ul class="pagination">
             {{#if canGoPrevious}}
