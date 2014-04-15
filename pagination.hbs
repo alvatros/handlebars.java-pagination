@@ -1,0 +1,22 @@
+<!--pagination param ==> page:{{param.page}} totalPageCount:{{param.totlalPageCount}} countPerPageGroup:{{param.countPerPageGroup}}-->
+{{#pagination this param.page param.totlalPageCount param.countPerPageGroup}}
+    <div class="paging_bootstrap">
+        <ul class="pagination">
+            {{#if canGoPrevious}}
+            <li class="prev"><a href="#" onclick="goPage({{previousIdx}}); return false;"><i class="icon-double-angle-left"></i></a></li>
+            {{else}}
+            <li class="prev disabled"><a href="#"><i class="icon-double-angle-left"></i></a></li>
+            {{/if}}
+
+            {{#each pages}}
+            <li {{#if isCurrent}}class="active"{{/if}}><a href="#" onclick="goPage({{page}}); return false;">{{page}}</a></li>
+            {{/each}}
+
+            {{#if canGoNext}}
+            <li class="next"><a href="#" onclick="goPage({{nextIdx}}); return false;"><i class="icon-double-angle-right"></i></a></li>
+            {{else}}
+            <li class="next disabled"><a href="#"><i class="icon-double-angle-right"></i></a></li>
+            {{/if}}
+        </ul>
+    </div>
+{{/pagination}}
